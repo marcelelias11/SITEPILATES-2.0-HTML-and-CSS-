@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio de Pilates FisioNassau</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <img src="fisioNassau01.png" alt="Logo do Studio de Pilates">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./servicos.html">Serviços</a></li>
+                <li><a href="./horarios.html">Horários</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contato">
+        <h2 id="entreemcontato">Entre em Contato</h2>
+        <p id="preenchaformulario">Preencha o formulário abaixo para entrar em contato conosco:</p>
+        <form onsubmit="return enviarFormulario();">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarFormulario() {
+
+            alert("Informações foram enviadas com sucesso, logo logo enviaremos um email para você!");
+            window.location.href = "./index.html";
+            return false;
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("mensagem").value = "";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Studio de Pilates FisioNassau</p>
+    </footer>
+</body>
+
+</html>
